@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  safaribooks:
+    container_name: calibre
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './list.txt:/app/list.txt:ro'
+      - './cookies.json:/app/cookies.json:rw'
+      - './Books:/app/Books:rw'
